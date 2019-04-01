@@ -54,10 +54,6 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("1a48a3140b205c5a182662d6187fff375074c5f0455fb4f608238ca4939dd907"))
-    (1000, uint256("3b9b919e6b61b61c06db7f25d1bea3ddd7e5ba9c9b76e8091f99c8416ff38a3f"))
-    (10000, uint256("753f274d248a4af68039f9b970ce3e335280581ba164ee534ca5b87f07f92822"))
-    (100000, uint256("a8a64384f26d7cbeae58ba7e70ea4fc23b4e754466cfb381ce76cd77296bcc1f"))
     (142000, uint256("d86fad63372bb64d1bc655cb6366060652c9f83760788e98f70d8cd4f15092ae"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
@@ -101,16 +97,16 @@ public:
         pchMessageStart[3] = 0x3b;
         vAlertPubKey = ParseHex("041babfe7f012d2a85edac110ebdfaff0f4c5fdea78ec811703d921de824d5979eea2aea703b15bda37c7add3248fb85f89a5c45cfafe85b78af33905613a95a52");
         nDefaultPort = 39777;
-        bnProofOfWorkLimit = ~uint256(0) >> 20; // ValinorCoin starting difficulty is 1 / 2^12
+        bnProofOfWorkLimit = ~uint256(0) >> 2; // ValinorCoin starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 210000;
         nMaxReorganizationDepth = 100;
-        nEnforceBlockUpgradeMajority = 750;
-        nRejectBlockOutdatedMajority = 950;
-        nToCheckBlockUpgradeMajority = 1000;
+        nEnforceBlockUpgradeMajority = 8100;
+        nRejectBlockOutdatedMajority = 10260;
+        nToCheckBlockUpgradeMajority = 10800;
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60; // ValinorCoin: 1 day
         nTargetSpacing = 1 * 60;  // ValinorCoin: 1 minute
-        nLastPOWBlock = 145000;
+        nLastPOWBlock = 300000;
         nMaturity = 50;
         nMasternodeCountDrift = 20;
         nMasternodeCollateralLimit = 50000;
