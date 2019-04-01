@@ -62,9 +62,9 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
     1553976208, // * UNIX timestamp of last checkpoint block
-    0,          // * total number of transactions between genesis and last checkpoint
+    286177,          // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
-    2000        // * estimated number of transactions per day after checkpoint
+    3000        // * estimated number of transactions per day after checkpoint
 };
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
@@ -110,7 +110,7 @@ public:
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60; // ValinorCoin: 1 day
         nTargetSpacing = 1 * 60;  // ValinorCoin: 1 minute
-        nLastPOWBlock = 300;
+        nLastPOWBlock = 145000;
         nMaturity = 50;
         nMasternodeCountDrift = 20;
         nMasternodeCollateralLimit = 50000;
