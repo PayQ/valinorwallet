@@ -54,11 +54,11 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (142000, uint256("d86fad63372bb64d1bc655cb6366060652c9f83760788e98f70d8cd4f15092ae"));
+    (0, uint256("1a48a3140b205c5a182662d6187fff375074c5f0455fb4f608238ca4939dd907"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1553976208, // * UNIX timestamp of last checkpoint block
-    286177,          // * total number of transactions between genesis and last checkpoint
+    1537376400, // * UNIX timestamp of last checkpoint block
+    0,          // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     3000        // * estimated number of transactions per day after checkpoint
 };
@@ -244,7 +244,7 @@ public:
 
         nPoolMaxTransactions = 2;
         strSporkKey = "04ca864ee5e01ddf5ec4db13d7df059ce12741a9c90fb68ba2c84695b1d2217b143fbb86c9e7cd37a27161b1da170ed12b1d7ecfb8d84b70ebd2eab29f9871d556";
-        strObfuscationPoolDummyAddress = "yFm5VZYdHX1gsLHMdFrAFnGVfgT4b87Zwq";
+        strObfuscationPoolDummyAddress = "LrJNYbKU6up2VRtWdvhzV4MZJN9hii6VCK";
         nStartMasternodePayments = 1537376400; // Wed, 22 Aug 2018 13:00:00 GMT
     }
     const Checkpoints::CCheckpointData& Checkpoints() const
